@@ -1,0 +1,16 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "backend to azalea-blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joan Coronado <joan15corza@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2",
+    "minio": "^8.0.2",
+    "mongoose": "^8.8.4"
+  }
+}
