@@ -1,5 +1,16 @@
 const Minio = require("minio");
 
+const policy = {
+  Version: "2012-10-17",
+  Statement: [
+    {
+      Effect: "Allow",
+      Principal: "*",
+      Action: ["s3:GetObject", "s3:ListBucket"],
+      Resource: ["arn:aws:s3:::blog", "arn:aws:s3:::blog*"]
+    }
+  ]
+};
 class MinioService extends Minio.Client {
   constructor() {
     super({
@@ -26,12 +37,21 @@ class MinioService extends Minio.Client {
         return;
       }
 
-      this.makeBucket("blog", "us-east-1", (err) => {
+      this.makeBucket(this.bucketName, "us-east-1", (err) => {
         if (err) {
           return console.error("Error al crear el bucket:", err);
         }
         console.log(`Bucket '${this.bucketName}' creado exitosamente.`);
       });
+    });
+
+    this.setBucketPolicy(this.bucketName, JSON.stringify(policy), (err) => {
+      if (err) {
+        return console.error(
+          "Error al configurar la política del bucket:",
+          err
+        );
+      }
     });
   }
 }
