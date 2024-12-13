@@ -1,38 +1,26 @@
-# sv
+# Azalea-Blog Dashboard
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Bienvenido al Dashboard de la Azalea-Blog. Este panel de administración te permite gestionar y controlar todos los aspectos de tu blog, incluyendo la creación y edición de publicaciones, gestión de comentarios, usuarios y configuración de la aplicación.
 
-## Creating a project
+## Características
 
-If you're seeing this, you've probably already done this step. Congrats!
+* Gestión de Publicaciones: Crear, editar, eliminar y organizar publicaciones del blog.
+* Gestión de Comentarios: Aprobar, rechazar o eliminar comentarios de los usuarios.
+* Gestión de Usuarios: Ver y administrar los usuarios registrados, sus roles y permisos.
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Requisitos
 
-# create a new project in my-app
-npx sv create my-app
-```
+* Node.js: Versión 14 o superior.
 
-## Developing
+## Contribuciones
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Las contribuciones son bienvenidas. Si deseas contribuir al proyecto, sigue estos pasos:
 
-```bash
-npm run dev
+1. Haz un fork del repositorio.
+2. Crea una nueva rama para tu característica o corrección de errores.
+3. Realiza tus cambios.
+4. Envia un pull request con una descripción detallada de tus cambios.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Licencia
 
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Este proyecto está bajo la licencia [MIT](./LICENSE).
