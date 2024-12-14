@@ -56,4 +56,4 @@ class MinioService extends Minio.Client {
   }
 }
 
-module.exports = MinioService;
+module.exports = { MinioService };
