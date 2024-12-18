@@ -8,7 +8,7 @@ class PostRouter {
   }
 
   create(req, res) {
-    this.controller.create(req.body);
+    this.controller.create(req.body, req.files?.file);
     res.send("Publicación creada");
   }
 
