@@ -3,10 +3,11 @@ const { MinioService } = require("../services/MinioService");
 class PostController {
   constructor() {
     this.storage = new MinioService();
+    this.storage.setup();
   }
 
-  create(post) {
-    console.log(post);
+  async create(post, file) {
+    await this.storage.putObject("blog", `/files/${file.name}`, file.data);
   }
 }
 

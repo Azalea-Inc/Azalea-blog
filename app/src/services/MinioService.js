@@ -17,8 +17,8 @@ class MinioService extends Minio.Client {
       endPoint: "localhost",
       port: 9000,
       useSSL: false,
-      accessKey: process.env.MINO_ACCESS_KEY,
-      secretKey: process.env.MINO_SECRET_KEY
+      accessKey: process.env.MINO_ACCESS_KEY || "admin",
+      secretKey: process.env.MINO_SECRET_KEY || "password"
     });
 
     this.bucketName = "blog";
